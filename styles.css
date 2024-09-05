@@ -1,0 +1,136 @@
+/* 글로벌 설절 */
+* {
+    margin:0;
+    padding: 0;
+}
+/* 백그라운드를 검정색으로 */
+body {
+    background-color: black !important;
+}
+/* 로고의 크기 조정 */
+/* 로고가 들어 있는 이미지 박스의 div를 통해 크기를 조절한다. */
+.logo{
+    height: 45px;
+    width: 90px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.logo img{
+    width: 100%;
+}
+/* 네비게이션 바 설정 */
+/* 화면 크기에 따라 요소를 이동 시키기 위해 flex와 space-around설정을 사용했다.*/
+.navbar{
+    background-color: black !important;
+    position: fixed;
+    top:0;
+    z-index:1;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.navbar ul{
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.navbar li {
+    list-style: none !important;
+    padding: 1rem;
+}
+/* 글자의 설정 글자의 색을 흰색으로하고 박스의 패딩을 준다. */
+.navbar li a{
+    padding: 2px 2px;
+    text-decoration: none;
+    color: white !important;
+}
+
+.navbar li a:hover{
+    color: gray !important;
+}
+/* 백그라운드 이미지 설정 cover를 통해 정해진 박스 안을 채운다. */
+.banner{
+    margin-top: 55px;
+    background-image: url("main-img/banner.jpg");
+    background-size: cover !important;
+    background-position:center !important;
+    height: 448px;
+    color: white !important;
+}
+
+.banner_contents{
+    margin-left:30px;
+    padding-top: 190px !important;
+    height: 190px;
+}
+
+.banner_title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner_btn{
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+
+.banner_btn button{
+    width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+.banner_btn button:hover{
+    background-color: gray !important;
+    cursor: pointer;
+}
+
+.banner_description {
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* row */
+
+.row{
+    color:white;
+}
+
+.row h2 {
+    margin: 20px 0 0 25px;
+}
+
+.row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+/* overflow속성은 요소의 박스에 내용이 더 기 */
+.row_posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px
+}
+
+.row_poster:hover{
+    transform: scale(1.1);
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row_posterLarge{
+    max-height: 250px !important;
+}
